@@ -1,0 +1,46 @@
+.modern-title {
+    font-size: 3rem; /* Tamaño del texto */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(45deg, #ff6b6b, #f06595, #6a82fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    animation: fadeIn 1s ease-out;
+    position: relative;
+}
+
+.modern-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #6a82fb);
+    border-radius: 2px;
+    transform: translateX(-50%);
+    animation: underlineSlide 1s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+    opacity: 0;
+    transform: translateY(-20px);
+    }
+    100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+@keyframes underlineSlide {
+    0% {
+    width: 0;
+    }
+    100% {
+    width: 50%;
+    }
+}

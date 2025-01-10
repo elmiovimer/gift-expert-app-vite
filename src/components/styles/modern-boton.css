@@ -1,0 +1,48 @@
+.modern-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .modern-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  .modern-button:hover {
+    background: linear-gradient(45deg, #f06595, #ff6b6b);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modern-button:hover::after {
+    transform: scale(4);
+  }
+  
+  .modern-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .modern-button span {
+    position: relative;
+    z-index: 1;
+  }
+  
